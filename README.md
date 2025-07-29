@@ -11,64 +11,49 @@
 	•	✅ 支持 logging 输出执行日志
 	•	✅ 可部署于本地/服务器，实现无人值守预约
 
-⸻
-
 📦 依赖环境
 	•	Python 3.6+
 	•	requests
 	•	schedule
 
 可通过以下命令安装依赖：
-
+```
 pip install requests schedule
-
-⸻
+```
 
 🚀 使用方式
 	1.	获取 Authorization Token（通过浏览器或抓包获取）；
 	2.	克隆或下载本项目；
 	3.	编辑脚本，将 your_token_here 替换为你自己的预约 Token；
 	4.	运行脚本（建议使用 nohup、tmux 或部署为守护进程）：
-
+```
 python3 appointment_scheduler.py
-
-
-⸻
+```
 
 🔧 配置说明
 
 你可以根据需要修改以下字段：
-
+```
 "lineName": "昌平线",
 "stationName": "沙河站",
 "timeSlot": "0830-0840",
 "snapshotTimeSlot": "0630-0930",
-
-
-⸻
+```
 
 ⏰ 部署建议
 	•	本地部署：适用于个人电脑，建议使用 定时任务 + 保活工具（如 pm2、tmux、crontab）；
 	•	服务器部署：可搭配 Supervisor 或 systemd 实现长驻执行；
 
-⸻
-
 🛡️ 免责声明
 	•	本项目仅供学习和个人使用，请勿滥用；
 	•	接口调用频繁可能会被限流，请谨慎使用；
 	•	使用本项目可能涉及隐私信息（Token），请妥善保存，切勿公开上传你的 Token 到 GitHub！
- 
-⸻
 
 📄 示例输出日志
-
+```
 2025-07-29 12:01:00 - 状态码: 200
 2025-07-29 12:01:00 - 响应内容: {"code":,"msg":"","data":{...}}
-
-⸻
-
+```
 📮 联系与反馈
 
 如果你有建议或问题，欢迎提交 Issue 或 PR！
-
-⸻
